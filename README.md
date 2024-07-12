@@ -26,5 +26,8 @@ await getHistorical(name: string) //Historical daily market information of a spe
 
 # Installation
 
-1. Create the folder `realworld-commoditiesprice` in the `Rebar` Framework directory under plugins
-2. Download the folder `server` from this repository and copy it into the folder `realworld-commoditiesprice`
+From the main directory of your `Rebar` framework.
+
+```sh
+git clone https://github.com/KoronGIT/realworld-commoditiesprice.git src/plugins/realworld-commoditiesprice
+```
