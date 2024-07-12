@@ -51,8 +51,10 @@ const updateData = async (type: 'current' | 'historical'): Promise<void> => {
 const updateStockData = () => updateData('current');
 const updateHistoricalData = () => updateData('historical');
 
-//updateStockData()
-//updateHistoricalData()
+updateStockData()
+alt.setInterval(updateStockData, CommoditiesConfig.timeBetweenUpdates);
 
-//alt.setInterval(updateStockData, CommoditiesConfig.timeBetweenUpdates);
-//alt.setInterval(updateHistoricalData, 60000 * 60 * 24);
+if (CommoditiesConfig.historicalPriceData === true) {
+    updateHistoricalData()
+    alt.setInterval(updateHistoricalData, 60000 * 60 * 24);
+}
